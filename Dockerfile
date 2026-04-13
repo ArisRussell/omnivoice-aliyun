@@ -12,7 +12,7 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y git ffmpeg wget
 
 # 4. 克隆 OmniVoice 源码并安装 Python 依赖
-RUN git clone https://github.com/k2-fsa/OmniVoice.git .
+RUN git clone https://ghproxy.net/https://github.com/k2-fsa/OmniVoice.git .
 RUN pip install --no-cache-dir fastapi uvicorn torchaudio transformers modelscope
 
 # 5. 把下载脚本放进镜像
