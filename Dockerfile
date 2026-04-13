@@ -20,7 +20,7 @@ COPY download_model.py .
 
 # 👉 强烈建议：为了防止下一步因为下载几十G模型导致超时，先注释掉这行。
 # 等镜像打包成功并在函数计算跑起来后，让它在启动时去下载。
-# RUN python download_model.py
+RUN python download_model.py
 
 # 6. 暴露 9880 端口给外部访问
 EXPOSE 9880
